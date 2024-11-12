@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <style>
+     #paper{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <canvas id="paper" width="300" height="300">  
+    </canvas>
+    <script type="text/javascript">
+        var paper = document.getElementById("paper");
+        var ctx = paper.getContext("2d");
+        var pw = paper.width;
+        var ph = paper.height;
+        var w2 = paper.width / 2;
+        var h2 = paper.height / 2;
+      
+        // Correct method name: beginPath()
+        ctx.beginPath();
+        
+        ctx.lineWidth = 5;  // lineWidth should be camelCase
+        ctx.moveTo(w2, h2 - 90);
+        ctx.lineTo(230, 170);
+        ctx.moveTo(230, 170);
+        ctx.lineTo(70, 170);
+        ctx.moveTo(70, 170);
+        ctx.lineTo(w2, h2 - 90);
+      
+        ctx.stroke();
+        ctx.closePath();
+      </script>
+      
+    
+
+
+    </script>
+    
+</body>
+</html>
